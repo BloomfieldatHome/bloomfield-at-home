@@ -68,6 +68,7 @@ def page(title, description, body, path, extra_head=""):
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}">
 <meta property="og:url" content="{canonical}"><meta property="og:type" content="website">
 <meta property="og:site_name" content="{e(SITE['name'])}">
+<meta name="p:domain_verify" content="ed5b08fff46b6a262476f5f0b8973de2"/>
 <link rel="stylesheet" href="/style.css">{extra_head}
 </head><body>
 <header class="site"><div class="wrap"><a class="logo" href="/">Bloomfield <span>at Home</span></a>
