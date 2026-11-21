@@ -116,9 +116,9 @@ def build():
     (OUT / "style.css").write_text(CSS)
     guides = load_guides()
     live = [g for g in guides if g.get("status", "published") == "published"]
-    redirects = ["https://bloomfieldathome.co.uk/* https://bloomfieldathome.com/:splat 301!",
-                 "https://www.bloomfieldathome.co.uk/* https://bloomfieldathome.com/:splat 301!",
-                 "https://www.bloomfieldathome.com/* https://bloomfieldathome.com/:splat 301!"]
+    redirects = ["https://bloomfieldathome.com/* https://bloomfieldathome.co.uk/:splat 301!",
+                 "https://www.bloomfieldathome.com/* https://bloomfieldathome.co.uk/:splat 301!",
+                 "https://www.bloomfieldathome.co.uk/* https://bloomfieldathome.co.uk/:splat 301!"]
     urls = ["/", "/guides/", "/about/", "/affiliate-disclosure/", "/privacy/"]
 
     # Guides

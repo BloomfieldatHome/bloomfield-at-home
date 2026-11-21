@@ -1,3 +1,3 @@
 User-agent: *
 Allow: /
-Sitemap: https://bloomfieldathome.com/sitemap.xml
+Sitemap: https://bloomfieldathome.co.uk/sitemap.xml

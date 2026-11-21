@@ -1,6 +1,6 @@
 # Bloomfield at Home — project rules
 
-Owner: Russell Bloomfield, personally (NOT Bloomfield Care Ltd). Domain bloomfieldathome.com (primary, chosen 21 Nov 2026) and .co.uk (redirects to .com), registered to Russell personally at Namecheap, DNS on Cloudflare. GitHub BloomfieldatHome/bloomfield-at-home, hosting on the BloomfieldatHome Netlify team.
+Owner: Russell Bloomfield, personally (NOT Bloomfield Care Ltd). Domain bloomfieldathome.co.uk (main) and .com (redirect), registered to Russell personally at Namecheap, DNS on Cloudflare. GitHub BloomfieldatHome/bloomfield-at-home, hosting on the BloomfieldatHome Netlify team.
 
 ## What this site is
 An independent guide site for older people and families helping someone live well at home: home safety and alarms, stairlifts and mobility, wills and LPAs, everyday aids and wellbeing, and household bills/utilities. It earns from clearly labelled affiliate and referral links.
