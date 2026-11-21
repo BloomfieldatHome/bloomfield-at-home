@@ -92,3 +92,12 @@
   official_url: https://beyond.life/
   affiliate_url: ''
   programme: Awin
+- id: wiltshire-farm-foods
+  name: Wiltshire Farm Foods
+  category: eating-well-at-home
+  blurb: Frozen ready meals delivered to the door, including smaller portions and texture-modified ranges. Drivers can put the meals in the freezer for you.
+  official_url: https://www.wiltshirefarmfoods.com/
+  affiliate_url: ''
+  programme: Awin
+  awin_mid: 2536
+  awin_approved: false
