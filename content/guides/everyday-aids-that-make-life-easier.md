@@ -4,7 +4,7 @@ description: Small, inexpensive aids for the kitchen, bathroom and living room t
 category: everyday-aids-and-wellbeing
 updated: 2026-11-21
 status: published
-products: [complete-care-shop]
+products: [complete-care-shop, countrywide]
 ---
 Many of the things that make daily life harder - opening jars, getting out of a low chair, reaching the back of a cupboard - have simple, cheap solutions. Before buying, ask whether an occupational therapist assessment from the council could provide some of these free.
 

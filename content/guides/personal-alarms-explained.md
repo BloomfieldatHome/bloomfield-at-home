@@ -4,7 +4,7 @@ description: A plain-English guide to personal alarms and falls detectors for ol
 category: staying-safe-at-home
 updated: 2026-11-21
 status: published
-products: [taking-care, careline, lifeconnect24]
+products: [taking-care, careline, lifeconnect24, yourstride]
 ---
 A personal alarm is a small button, usually worn as a pendant or on the wrist, that calls for help when pressed. For many families it is the single thing that makes it feel safe for someone to carry on living alone.
 
