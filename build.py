@@ -191,7 +191,7 @@ def build():
                            f'<section class="hero"><h1>All guides</h1></section>{guide_cards(live)}', "/guides/"))
 
     about = """<section class="hero"><h1>About Bloomfield at Home</h1></section><article>
-<p>Bloomfield at Home is an independent guide site run by Russell Bloomfield. It brings together plain-English information about the practical side of later life at home: alarms and home safety, mobility equipment, wills and Lasting Powers of Attorney, everyday aids and household bills.</p>
+<p>Bloomfield at Home is an independent guide site. It brings together plain-English information about the practical side of later life at home: alarms and home safety, mobility equipment, wills and Lasting Powers of Attorney, everyday aids and household bills.</p>
 <h2>What we are not</h2>
 <p>We are not a care provider and we do not give medical, legal or financial advice. Bloomfield at Home is separate from Bloomfield Care, a home care provider. Bloomfield Care's care staff do not recommend or sell products to the people they support.</p>
 <p>If you are looking for home care or live-in care, you can find Bloomfield Care at <a href="https://bloomfield-care.com/">bloomfield-care.com</a>.</p>
@@ -217,7 +217,7 @@ def build():
 <p>This site does not ask you to create an account and does not use advertising or tracking cookies.</p>
 <p>When you click an affiliate link, the company you visit may set its own cookies to record that you came from us. Their own privacy policy applies on their site.</p>
 <p>If you email us, we use your email only to reply and do not share it.</p>
-<p>Site run by Russell Bloomfield. Contact: <a href="mailto:hello@bloomfieldathome.co.uk">hello@bloomfieldathome.co.uk</a>.</p></article>"""
+<p>Contact: <a href="mailto:hello@bloomfieldathome.co.uk">hello@bloomfieldathome.co.uk</a>.</p></article>"""
     write("/privacy/", page(f"Privacy | {SITE['name']}", "Privacy information for Bloomfield at Home.", privacy, "/privacy/"))
 
     (OUT / "404.html").write_text(page(f"Page not found | {SITE['name']}", "Page not found.",
