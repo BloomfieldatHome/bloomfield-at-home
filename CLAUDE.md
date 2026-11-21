@@ -30,4 +30,4 @@ Made public so Netlify's free plan accepts pushes from the BloomfieldCare GitHub
 - Bloomfield palette: navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8, sand #F1E8E3. Site uses the same palette.
 - Pins are 1000x1500: navy header band (category kicker + "FREE PLAIN-ENGLISH GUIDE"), serif headline, short subline, maroon rule, a simple flat illustration in a sand rounded panel, navy footer "bloomfieldathome.com".
 - Illustrations are simple flat shapes drawn in code (no photos, no AI images, no Bloomfield Care client photos). Generator: tools/pins/make.py (text layout from pins.json) then tools/pins/illus.py (one drawing function per pin; add new ones as needed). Run from a scratch copy of tools/pins.
-- Pinterest cannot be posted to automatically: approved pins go in public/pins/ and Russell uploads them (bulk upload) himself.
+- Posting: approved pin images go in pins/ (copied to public/pins/) AND get an entry in data/pins.yaml (img, guide slug, title, desc, date). The build writes https://bloomfieldathome.com/pins.xml, which Pinterest auto-publish reads and posts from. Only add approved pins. Never remove entries (they're the posting history).

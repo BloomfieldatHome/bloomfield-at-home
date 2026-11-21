@@ -221,6 +221,22 @@ def build():
     (OUT / "sitemap.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">\n'
                                      + "".join(f"<url><loc>{SITE['url']}{u}</loc></url>\n" for u in urls) + "</urlset>\n")
     (OUT / "_redirects").write_text("\n".join(redirects) + "\n")
+    # Pinterest auto-publish feed: one item per approved pin in data/pins.yaml
+    from email.utils import format_datetime
+    from datetime import datetime, timezone
+    pins = yaml.safe_load((ROOT / "data/pins.yaml").read_text()) or []
+    items = []
+    for p in pins:
+        when = datetime.strptime(str(p["date"]), "%Y-%m-%d").replace(hour=10, tzinfo=timezone.utc)
+        link = f"{SITE['url']}/guides/{p['guide']}/?utm_source=pinterest&utm_medium=social"
+        img = f"{SITE['url']}/pins/{p['img']}"
+        items.append(f"<item><title>{e(p['title'])}</title><link>{e(link)}</link><guid isPermaLink=\"false\">pin-{e(p['img'])}</guid>"
+                     f"<pubDate>{format_datetime(when)}</pubDate><description>{e(p['desc'])}</description>"
+                     f"<enclosure url=\"{img}\" type=\"image/png\" length=\"0\"/>"
+                     f"<media:content url=\"{img}\" medium=\"image\" type=\"image/png\"/></item>")
+    (OUT / "pins.xml").write_text('<?xml version="1.0" encoding="UTF-8"?>\n<rss version="2.0" xmlns:media="http://search.yahoo.com/mrss/"><channel>'
+        f"<title>{e(SITE['name'])} pins</title><link>{SITE['url']}/</link><description>{e(SITE['tagline'])}</description>"
+        + "".join(items) + "</channel></rss>\n")
     print(f"Built {len(live)} guides, {len(SITE['categories'])} categories, {len(urls)} URLs")
 
 
