@@ -1,0 +1,20 @@
+name: Bloomfield at Home
+tagline: Honest guides to living well at home in later life
+url: https://bloomfieldathome.co.uk
+email: hello@bloomfieldathome.co.uk
+categories:
+  - slug: staying-safe-at-home
+    title: Staying Safe at Home
+    intro: Personal alarms, falls detectors and simple changes that make a home safer.
+  - slug: stairlifts-and-mobility
+    title: Stairlifts, Homelifts & Getting Around
+    intro: Walking aids, wheelchairs, stairlifts and homelifts, and the free help to look at first.
+  - slug: wills-and-lpas
+    title: Planning Ahead - Wills & LPAs
+    intro: Wills and Lasting Powers of Attorney explained in plain English, including the free official routes.
+  - slug: everyday-aids-and-wellbeing
+    title: Everyday Aids & Wellbeing
+    intro: Small, inexpensive things that make daily life easier and help people stay connected.
+  - slug: household-bills
+    title: Household Bills & Utilities
+    intro: Social tariffs, discounts and free registers that can cut bills and protect vulnerable households.

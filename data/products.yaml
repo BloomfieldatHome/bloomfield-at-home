@@ -1,0 +1,59 @@
+# Provider / product cards. Leave affiliate_url empty until the programme approves us;
+# the card then shows the official link with no affiliate label.
+# programme: where the affiliate relationship sits (Awin, Amazon Associates, direct).
+- id: taking-care
+  name: Taking Care (Age Co personal alarm)
+  category: staying-safe-at-home
+  blurb: Monitored personal alarms and falls detectors, sold as the Age Co alarm. UK-based response centre.
+  official_url: https://taking.care/
+  affiliate_url: ""
+  programme: Awin
+- id: careline
+  name: Careline
+  category: staying-safe-at-home
+  blurb: Monitored personal and falls alarms, with pendant and wrist options.
+  official_url: https://www.carelineuk.co.uk/
+  affiliate_url: ""
+  programme: Awin
+- id: lifeconnect24
+  name: LifeConnect24
+  category: staying-safe-at-home
+  blurb: Personal alarm service with home and mobile (GPS) options.
+  official_url: https://www.lifeconnect24.co.uk/
+  affiliate_url: ""
+  programme: Awin
+- id: stiltz
+  name: Stiltz Homelifts
+  category: stairlifts-and-mobility
+  blurb: Compact through-floor homelifts for homes where a stairlift is not the right fit.
+  official_url: https://www.stiltz.co.uk/
+  affiliate_url: ""
+  programme: Direct referral
+- id: complete-care-shop
+  name: Complete Care Shop
+  category: stairlifts-and-mobility
+  blurb: Large range of mobility and daily living aids, from walking frames to bathroom equipment.
+  official_url: https://www.completecareshop.co.uk/
+  affiliate_url: ""
+  programme: Awin
+- id: efoldi
+  name: eFoldi
+  category: stairlifts-and-mobility
+  blurb: Lightweight folding mobility scooters and powerchairs designed for travel.
+  official_url: https://www.efoldi.co.uk/
+  affiliate_url: ""
+  programme: Awin
+- id: octopus-legacy
+  name: Octopus Legacy
+  category: wills-and-lpas
+  blurb: Online and guided will writing, plus help preparing Lasting Powers of Attorney.
+  official_url: https://octopuslegacy.com/
+  affiliate_url: ""
+  programme: Awin
+- id: beyond
+  name: Beyond
+  category: wills-and-lpas
+  blurb: Simple online wills, with checks by their team.
+  official_url: https://beyond.life/
+  affiliate_url: ""
+  programme: Awin
