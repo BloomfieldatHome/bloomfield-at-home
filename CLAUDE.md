@@ -25,3 +25,9 @@ An independent guide site for older people and families helping someone live wel
 
 ## Repository is PUBLIC (since 21 Nov 2026)
 Made public so Netlify's free plan accepts pushes from the BloomfieldCare GitHub login. Never commit secrets, API keys, affiliate account IDs beyond what appears in public links, commission rates, earnings, or anything about Bloomfield Care clients or staff.
+
+## Pinterest pins (style agreed by Russell, 21 Nov 2026)
+- Bloomfield palette: navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8, sand #F1E8E3. Site uses the same palette.
+- Pins are 1000x1500: navy header band (category kicker + "FREE PLAIN-ENGLISH GUIDE"), serif headline, short subline, maroon rule, a simple flat illustration in a sand rounded panel, navy footer "bloomfieldathome.com".
+- Illustrations are simple flat shapes drawn in code (no photos, no AI images, no Bloomfield Care client photos). Generator: tools/pins/make.py (text layout from pins.json) then tools/pins/illus.py (one drawing function per pin; add new ones as needed). Run from a scratch copy of tools/pins.
+- Pinterest cannot be posted to automatically: approved pins go in public/pins/ and Russell uploads them (bulk upload) himself.
