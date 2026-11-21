@@ -13,6 +13,11 @@ ROOT = Path(__file__).parent
 OUT = ROOT / "public"
 SITE = yaml.safe_load((ROOT / "data/site.yaml").read_text())
 PRODUCTS = {p["id"]: p for p in yaml.safe_load((ROOT / "data/products.yaml").read_text())}
+from urllib.parse import quote
+for _p in PRODUCTS.values():
+    if _p.get("awin_approved") and _p.get("awin_mid"):
+        _p["affiliate_url"] = (f"https://www.awin1.com/cread.php?awinmid={_p['awin_mid']}"
+                               f"&awinaffid={SITE['awin_publisher_id']}&clickref=bah&ued={quote(_p['official_url'], safe='')}")
 CATS = {c["slug"]: c for c in SITE["categories"]}
 YEAR = date.today().year
 e = html.escape
