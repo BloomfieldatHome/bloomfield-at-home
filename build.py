@@ -115,6 +115,8 @@ def build():
         shutil.rmtree(OUT)
     OUT.mkdir()
     (OUT / "style.css").write_text(CSS)
+    if (ROOT / "pins").exists():
+        shutil.copytree(ROOT / "pins", OUT / "pins")
     guides = load_guides()
     live = [g for g in guides if g.get("status", "published") == "published"]
     redirects = ["https://bloomfieldathome.co.uk/* https://bloomfieldathome.com/:splat 301!",
