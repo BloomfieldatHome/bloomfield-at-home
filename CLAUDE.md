@@ -22,3 +22,6 @@ An independent guide site for older people and families helping someone live wel
 - `data/site.yaml` — categories and site settings. `data/products.yaml` — product/provider cards; `affiliate_url` empty means show the plain official link with no affiliate label.
 - `python3 build.py` renders everything into `public/` (committed). Netlify serves `public/` with no build step.
 - Always run `python3 build.py` and commit `public/` with content changes.
+
+## Repository is PUBLIC (since 21 Nov 2026)
+Made public so Netlify's free plan accepts pushes from the BloomfieldCare GitHub login. Never commit secrets, API keys, affiliate account IDs beyond what appears in public links, commission rates, earnings, or anything about Bloomfield Care clients or staff.
