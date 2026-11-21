@@ -17,6 +17,8 @@ An independent guide site for older people and families helping someone live wel
 9. Mobile-first: design and check at 375px first.
 10. British English, plain language, no jargon, no emojis, no "gesture of goodwill".
 
+11. **Never name Russell (or any person) as the owner on public pages.** Contact is hello@ only. (Russell, 21 Nov 2026.)
+
 ## How the site is built
 - `content/guides/*.md` — articles with YAML front matter (title, description, category, updated, status).
 - `data/site.yaml` — categories and site settings. `data/products.yaml` — product/provider cards; `affiliate_url` empty means show the plain official link with no affiliate label.
