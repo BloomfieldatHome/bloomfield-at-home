@@ -73,7 +73,18 @@
   official_url: https://octopuslegacy.com/
   affiliate_url: ''
   programme: Awin
-  awin_mid: 99413
+  awin_mid: null
+- id: squiggle
+  name: Squiggle Consult (complimentary basic will)
+  category: wills-and-lpas
+  blurb: UK estate planning firm offering a professionally written basic will at no
+    cost. They also sell other paid services, so check what is included before agreeing
+    to anything extra.
+  official_url: https://www.squiggleconsult.co.uk/
+  affiliate_url: ''
+  programme: Awin
+  awin_mid: 128887
+  awin_approved: true
 - id: beyond
   name: Beyond
   category: wills-and-lpas

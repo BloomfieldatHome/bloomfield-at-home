@@ -4,7 +4,7 @@ description: Solicitor, will writer or online will? A plain-English look at the 
 category: wills-and-lpas
 updated: 2026-11-21
 status: published
-products: [octopus-legacy, beyond]
+products: [squiggle, octopus-legacy, beyond]
 ---
 Without a valid will, the law decides who inherits, which may not match what someone wanted - unmarried partners, for example, can be left with nothing. Making a will is usually straightforward and inexpensive.
 
