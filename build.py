@@ -86,7 +86,7 @@ def page(title, description, body, path, extra_head=""):
 <link rel="stylesheet" href="/style.css">{extra_head}
 </head><body>
 <header class="site"><div class="wrap"><a class="logo" href="/">Bloomfield <span>at Home</span></a>
-<nav class="top"><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
+<nav class="top"><a href="/guides/">Guides</a><a href="/shop/">Shop</a><a href="/about/">About</a></nav></div></header>
 <main class="wrap">{body}</main>
 <footer class="site"><div class="wrap">
 <p class="indep">{INDEPENDENT}</p>
@@ -208,6 +208,33 @@ def build():
 
     write("/guides/", page(f"All guides | {SITE['name']}", "Every Bloomfield at Home guide in one place.",
                            f'<section class="hero"><h1>All guides</h1></section>{guide_cards(live)}', "/guides/"))
+
+    # Shop front
+    SHOP = yaml.safe_load((ROOT / "data/shop.yaml").read_text())
+    gtitle = {g["slug"]: g["title"] for g in live}
+    secs = ""
+    for sec in SHOP["sections"]:
+        items = [PRODUCTS[i] for i in sec["items"] if i in PRODUCTS and PRODUCTS[i].get("affiliate_url")]
+        if not items:
+            continue
+        guide = sec.get("guide")
+        glink = (f'<p class="meta">Not sure what you need? Read <a href="/guides/{guide}/">{e(gtitle[guide])}</a>.</p>'
+                 if guide in gtitle else "")
+        secs += f'<h2>{e(sec["title"])}</h2>{glink}' + "".join(provider_card(p) for p in items)
+    shop_body = (f'<div class="notice"><strong>Ad / affiliate links:</strong> this page contains affiliate links. '
+                 f'If you buy through them we may earn a commission at no extra cost to you. {AMAZON_LINE} '
+                 '<a href="/affiliate-disclosure/">Find out more</a>.</div>'
+                 f'<section class="hero"><h1>{e(SHOP["title"])}</h1><p class="lead">{e(SHOP["intro"])}</p></section>'
+                 '<div class="provider"><h3>Check what you can get free first</h3>'
+                 '<p>Your local council can arrange a free occupational therapist (OT) assessment, and many aids such as grab rails, '
+                 'toilet frames, bath boards and perching stools are often provided or fitted free after one. Contact your council\'s adult social care team, '
+                 'or ask your GP. Equipment for health needs can also come through the NHS.</p></div>'
+                 f'{secs}<p class="meta">Check measurements and weight limits before buying. If you are unsure what is suitable, '
+                 'ask for an OT assessment, or speak to a GP, physio or pharmacist.</p>')
+    write("/shop/", page(f"Shop everyday aids | {SITE['name']}",
+                         "Practical aids for the bathroom, kitchen and around the home for older people, with the free council and NHS options first.",
+                         shop_body, "/shop/"))
+    urls.append("/shop/")
 
     about = """<section class="hero"><h1>About Bloomfield at Home</h1></section><article>
 <p>Bloomfield at Home is an independent guide site. It brings together plain-English information about the practical side of later life at home: alarms and home safety, mobility equipment, wills and Lasting Powers of Attorney, everyday aids and household bills.</p>
