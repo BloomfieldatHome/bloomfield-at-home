@@ -1,6 +1,6 @@
 # Bloomfield at Home — project rules
 
-Owner: Russell Bloomfield, personally (NOT Bloomfield Care Ltd). Domain bloomfieldathome.com (primary, chosen 21 Nov 2026) and .co.uk (redirects to .com), registered to Russell personally at Namecheap, DNS on Cloudflare. GitHub BloomfieldatHome/bloomfield-at-home, hosting on the BloomfieldatHome Netlify team.
+Owner: Russell Bloomfield, personally (NOT Bloomfield Care Ltd). Domain bloomfieldathome.com (primary, chosen 21 Nov 2026) and .co.uk (redirects to .com), registered to Russell personally at Namecheap, DNS on Cloudflare. GitHub BloomfieldatHome/bloomfield-at-home, hosting on Cloudflare Pages (project bloomfield-at-home, connected to the BloomfieldatHome GitHub; deploys on every push to main). The old Netlify site has auto publishing off and is kept only as a fallback.
 
 ## What this site is
 An independent guide site for older people and families helping someone live well at home: home safety and alarms, stairlifts and mobility, wills and LPAs, everyday aids and wellbeing, and household bills/utilities. It earns from clearly labelled affiliate and referral links.
@@ -22,7 +22,7 @@ An independent guide site for older people and families helping someone live wel
 ## How the site is built
 - `content/guides/*.md` — articles with YAML front matter (title, description, category, updated, status).
 - `data/site.yaml` — categories and site settings. `data/products.yaml` — product/provider cards; `affiliate_url` empty means show the plain official link with no affiliate label.
-- `python3 build.py` renders everything into `public/` (committed). Netlify serves `public/` with no build step.
+- `python3 build.py` renders everything into `public/` (committed). Cloudflare Pages serves `public/` with no build step (output directory `public`).
 - Always run `python3 build.py` and commit `public/` with content changes.
 
 ## Repository is PUBLIC (since 21 Nov 2026)

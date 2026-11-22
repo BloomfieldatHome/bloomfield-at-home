@@ -81,6 +81,7 @@ def page(title, description, body, path, extra_head=""):
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}">
 <meta property="og:url" content="{canonical}"><meta property="og:type" content="website">
 <meta property="og:site_name" content="{e(SITE['name'])}">
+<meta name="generator" content="bah-cf">
 <meta name="p:domain_verify" content="ed5b08fff46b6a262476f5f0b8973de2"/>
 <link rel="stylesheet" href="/style.css">{extra_head}
 </head><body>
@@ -135,9 +136,8 @@ def build():
         shutil.copytree(ROOT / "pins", OUT / "pins")
     guides = load_guides()
     live = [g for g in guides if g.get("status", "published") == "published"]
-    redirects = ["https://bloomfieldathome.co.uk/* https://bloomfieldathome.com/:splat 301!",
-                 "https://www.bloomfieldathome.co.uk/* https://bloomfieldathome.com/:splat 301!",
-                 "https://www.bloomfieldathome.com/* https://bloomfieldathome.com/:splat 301!"]
+    # Hosted on Cloudflare Pages: .co.uk and www redirects are Cloudflare Redirect Rules, not _redirects lines.
+    redirects = []
     urls = ["/", "/guides/", "/about/", "/affiliate-disclosure/", "/privacy/"]
 
     # Guides
