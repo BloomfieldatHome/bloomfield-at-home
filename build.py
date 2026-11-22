@@ -105,10 +105,10 @@ def write(path, content):
 def provider_card(p):
     if is_amazon(p) and p.get("affiliate_url"):
         link = (f'<a class="btn" href="{e(p["affiliate_url"])}" rel="sponsored nofollow noopener" '
-                f'target="_blank">See options on Amazon (affiliate link)</a>')
+                f'target="_blank">See options on Amazon</a>')
     elif p.get("affiliate_url"):
         link = (f'<a class="btn" href="{e(p["affiliate_url"])}" rel="sponsored nofollow noopener" '
-                f'target="_blank">Visit {e(p["name"].split(" (")[0])} (affiliate link)</a>')
+                f'target="_blank">Visit {e(p["name"].split(" (")[0])}</a>')
     else:
         link = (f'<a class="btn" href="{e(p["official_url"])}" rel="nofollow noopener" '
                 f'target="_blank">Visit {e(p["name"].split(" (")[0])}</a>')
@@ -245,14 +245,14 @@ def build():
 <ul><li>We show free and official routes first, such as council assessments and gov.uk services.</li>
 <li>We only list established UK providers with clear terms.</li>
 <li>We do not cover insurance, funeral plans, pensions, equity release, loans or health supplements.</li>
-<li>Some links earn us a commission. They are always labelled. See <a href="/affiliate-disclosure/">how we make money</a>.</li></ul>
+<li>Some links earn us a commission. Pages that contain them always say so at the top. See <a href="/affiliate-disclosure/">how we make money</a>.</li></ul>
 <h2>Spotted a mistake?</h2>
 <p>Rules and prices change. If something looks out of date, email <a href="mailto:hello@bloomfieldathome.co.uk">hello@bloomfieldathome.co.uk</a> and we will check it.</p></article>"""
     write("/about/", page(f"About | {SITE['name']}", "Who runs Bloomfield at Home and how we choose what to include.", about, "/about/"))
 
     disclosure = """<section class="hero"><h1>How we make money</h1></section><article>
 <p>Bloomfield at Home is free to read. To pay for it, some of the links on this site are affiliate or referral links. If you click one and then buy something or sign up, the company may pay us a commission. You never pay more because you used our link.</p>
-<ul><li>Affiliate links are marked "(affiliate link)", and pages that contain them show an "Ad / affiliate links" notice at the top.</li>
+<ul><li>Every page that contains affiliate links shows an "Ad / affiliate links" notice at the top, before any links.</li>
 <li>Whether a company pays us does not decide whether it appears or where it is listed.</li>
 <li>We always mention free and official alternatives where they exist.</li>
 <li>As an Amazon Associate we earn from qualifying purchases.</li></ul>
