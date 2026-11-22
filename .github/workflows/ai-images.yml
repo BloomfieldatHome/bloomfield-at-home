@@ -1,0 +1,24 @@
+name: AI images
+on:
+  push:
+    branches: [ai-images]
+    paths: [tools/ai-images/requests.json]
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  generate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Generate
+        env:
+          GEMINI_API_KEY: ${{ secrets.GEMINI_API_KEY }}
+        run: python3 tools/ai-images/generate.py && cat tools/ai-images/last_run.txt
+      - name: Commit results
+        run: |
+          git config user.name "ai-images bot"
+          git config user.email "actions@users.noreply.github.com"
+          git add tools/ai-images
+          git commit -m "AI images generated" || echo "nothing new"
+          git push
