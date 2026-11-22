@@ -27,6 +27,16 @@ AMAZON_LINE = "As an Amazon Associate, Bloomfield at Home earns from qualifying 
 def is_amazon(p):
     return p.get("programme") == "Amazon"
 CATS = {c["slug"]: c for c in SITE["categories"]}
+_IMGF = ROOT / "data/images.yaml"
+IMAGES = {i["id"]: i for i in (yaml.safe_load(_IMGF.read_text()) or [])} if _IMGF.exists() else {}
+
+
+def img_tag(iid, cls="hero-img", eager=False):
+    i = IMAGES.get(iid)
+    if not i:
+        return ""
+    return (f'<img class="{cls}" src="/{i["file"]}" alt="{e(i["alt"])}" width="{i["width"]}" height="{i["height"]}" '
+            f'{"fetchpriority=\"high\"" if eager else "loading=\"lazy\""} decoding="async">')
 YEAR = date.today().year
 e = html.escape
 
@@ -45,6 +55,8 @@ nav.top a{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-si
 h1{font-size:1.85rem;line-height:1.25;margin:.2em 0 .4em}
 h2{font-size:1.35rem;margin:1.6em 0 .5em}
 .lead{font-size:1.1rem;color:var(--muted)}
+.hero-img,.sec-img{display:block;width:100%;height:auto;border-radius:14px;margin:6px 0 18px;background:var(--sand)}
+.sec-img{margin:4px 0 14px}
 .cards{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0 30px}
 .card{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--ink)}
 .card h3{margin:0 0 4px;font-size:1.1rem;color:var(--teal-d)}
@@ -68,7 +80,7 @@ INDEPENDENT = ("Bloomfield at Home is an independent guide site. It is not a car
                "gives general information only, and is not part of Bloomfield Care's regulated care service.")
 
 
-def page(title, description, body, path, extra_head=""):
+def page(title, description, body, path, extra_head="", og_image=""):
     canonical = SITE["url"] + path
     nav = "".join(f'<a href="/{c["slug"]}/">{e(c["title"].split(" - ")[0].split(",")[0])}</a>'
                   for c in SITE["categories"][:0])
@@ -80,7 +92,7 @@ def page(title, description, body, path, extra_head=""):
 <link rel="canonical" href="{canonical}">
 <meta property="og:title" content="{e(title)}"><meta property="og:description" content="{e(description)}">
 <meta property="og:url" content="{canonical}"><meta property="og:type" content="website">
-<meta property="og:site_name" content="{e(SITE['name'])}">
+<meta property="og:site_name" content="{e(SITE['name'])}">{('<meta property="og:image" content="' + SITE["url"] + "/" + og_image + '">') if og_image else ""}
 <meta name="generator" content="bah-cf">
 <meta name="p:domain_verify" content="ed5b08fff46b6a262476f5f0b8973de2"/>
 <link rel="stylesheet" href="/style.css">{extra_head}
@@ -132,6 +144,8 @@ def build():
         shutil.rmtree(OUT)
     OUT.mkdir()
     (OUT / "style.css").write_text(CSS)
+    if (ROOT / "images").exists():
+        shutil.copytree(ROOT / "images", OUT / "images")
     if (ROOT / "pins").exists():
         shutil.copytree(ROOT / "pins", OUT / "pins")
     guides = load_guides()
@@ -167,12 +181,13 @@ def build():
                   "publisher": {"@type": "Organization", "name": SITE["name"]},
                   "mainEntityOfPage": f"{SITE['url']}/guides/{g['slug']}/"}
         body = (f'<p class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/{cat["slug"]}/">{e(cat["title"])}</a></p>'
-                f'<article><h1>{e(g["title"])}</h1>'
+                f'<article><h1>{e(g["title"])}</h1>{img_tag(g.get("image"), eager=True)}'
                 f'<p class="meta">Updated {g["updated"].strftime("%-d %B %Y")} &middot; General information, not professional advice</p>'
                 f'{g["html"]}{provs}</article>{notice}')
         head = f'<script type="application/ld+json">{json.dumps(schema)}</script>'
         write(f"/guides/{g['slug']}/", page(f"{g['title']} | {SITE['name']}", g["description"], body,
-                                           f"/guides/{g['slug']}/", head))
+                                           f"/guides/{g['slug']}/", head,
+                                           IMAGES[g["image"]]["file"] if g.get("image") in IMAGES else ""))
         urls.append(f"/guides/{g['slug']}/")
 
     def guide_cards(items):
@@ -220,7 +235,7 @@ def build():
         guide = sec.get("guide")
         glink = (f'<p class="meta">Not sure what you need? Read <a href="/guides/{guide}/">{e(gtitle[guide])}</a>.</p>'
                  if guide in gtitle else "")
-        secs += f'<h2>{e(sec["title"])}</h2>{glink}' + "".join(provider_card(p) for p in items)
+        secs += f'<h2>{e(sec["title"])}</h2>{img_tag(sec.get("image"), "sec-img")}{glink}' + "".join(provider_card(p) for p in items)
     shop_notice = (f'<div class="notice"><strong>Ad / affiliate links:</strong> this page contains affiliate links. '
                  f'If you buy through them we may earn a commission at no extra cost to you. {AMAZON_LINE} '
                  '<a href="/affiliate-disclosure/">Find out more</a>.</div>')

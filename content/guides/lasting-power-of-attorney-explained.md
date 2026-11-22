@@ -3,6 +3,7 @@ title: Lasting Power of Attorney explained - and how to do it yourself
 description: What an LPA is, the two types, why it matters before it is needed, and how to make one using the official gov.uk service.
 category: wills-and-lpas
 updated: 2026-11-21
+image: guide-lasting-power-of-attorney
 status: published
 products: [octopus-legacy]
 ---

@@ -3,6 +3,7 @@ title: Stairlift, homelift or living downstairs - how to decide
 description: The pros and cons of stairlifts, through-floor homelifts and moving a bedroom downstairs, and the grant that may help pay for them.
 category: stairlifts-and-mobility
 updated: 2026-11-21
+image: guide-stairlift-homelift
 status: published
 products: [stiltz]
 ---

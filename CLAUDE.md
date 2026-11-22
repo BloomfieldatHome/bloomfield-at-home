@@ -22,6 +22,7 @@ An independent guide site for older people and families helping someone live wel
 ## How the site is built
 - `content/guides/*.md` — articles with YAML front matter (title, description, category, updated, status).
 - `data/site.yaml` — categories and site settings. `data/products.yaml` — product/provider cards; `affiliate_url` empty means show the plain official link with no affiliate label.
+- `data/images.yaml` — image library (id, web file in `images/`, original in `tools/ai-images/out/`, alt text, where used). Check it before generating new images and reuse where possible. Web copies are WebP, max 1200px, about 25KB each; guides take `image: <id>` in front matter (also used as the share image), shop sections take `image:` in data/shop.yaml.
 - `python3 build.py` renders everything into `public/` (committed). Cloudflare Pages serves `public/` with no build step (output directory `public`).
 - Always run `python3 build.py` and commit `public/` with content changes.
 

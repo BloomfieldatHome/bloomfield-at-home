@@ -3,6 +3,7 @@ title: 15 everyday aids that make life at home easier
 description: Small, inexpensive aids for the kitchen, bathroom and living room that help older people stay independent, and where to get them.
 category: everyday-aids-and-wellbeing
 updated: 2026-11-21
+image: guide-everyday-aids
 status: published
 products: [complete-care-shop, countrywide, amz-kettle-tipper, amz-reacher, amz-chair-raisers, amz-day-clock, amz-pill-organiser]
 ---

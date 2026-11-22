@@ -3,6 +3,7 @@ title: Cutting household bills in later life - discounts, social tariffs and fre
 description: The Warm Home Discount, broadband social tariffs, the Priority Services Register and other help with bills for older and vulnerable households.
 category: household-bills
 updated: 2026-11-21
+image: guide-cutting-household-bills
 status: published
 products: []
 ---

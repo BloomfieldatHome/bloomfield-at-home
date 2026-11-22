@@ -1,19 +1,44 @@
-# Shop front sections. Items are product ids from products.yaml. Amazon items only appear once amazon_tag is set.
+# Shop front sections. Items are product ids from products.yaml; image is an id from data/images.yaml.
 title: Shop everyday aids
 intro: Practical aids for the bathroom, kitchen and around the home, chosen to go with our guides. Each link opens a search so you can compare prices, sizes and reviews.
 sections:
-  - title: Bathroom
-    guide: everyday-aids-that-make-life-easier
-    items: [amz-grab-rails, amz-non-slip-bath-mat, amz-raised-toilet-seat, amz-toilet-frame, amz-shower-stool, amz-bath-board, amz-long-handled-sponge]
-  - title: Kitchen
-    guide: everyday-aids-that-make-life-easier
-    items: [amz-kettle-tipper, amz-jar-opener, amz-easy-grip-cutlery, amz-perching-stool, amz-walker-trolley]
-  - title: Around the house
-    guide: everyday-aids-that-make-life-easier
-    items: [amz-reacher, amz-chair-raisers, amz-night-lights, amz-day-clock, amz-pill-organiser, amz-big-button-phone]
-  - title: Getting around
-    guide: choosing-a-walking-aid
-    items: [amz-walking-stick]
-  - title: Staying safe
-    guide: preventing-falls-at-home
-    items: [amz-key-safe]
+- title: Bathroom
+  guide: everyday-aids-that-make-life-easier
+  items:
+  - amz-grab-rails
+  - amz-non-slip-bath-mat
+  - amz-raised-toilet-seat
+  - amz-toilet-frame
+  - amz-shower-stool
+  - amz-bath-board
+  - amz-long-handled-sponge
+  image: shop-bathroom
+- title: Kitchen
+  guide: everyday-aids-that-make-life-easier
+  items:
+  - amz-kettle-tipper
+  - amz-jar-opener
+  - amz-easy-grip-cutlery
+  - amz-perching-stool
+  - amz-walker-trolley
+  image: shop-kitchen
+- title: Around the house
+  guide: everyday-aids-that-make-life-easier
+  items:
+  - amz-reacher
+  - amz-chair-raisers
+  - amz-night-lights
+  - amz-day-clock
+  - amz-pill-organiser
+  - amz-big-button-phone
+  image: shop-around-the-house
+- title: Getting around
+  guide: choosing-a-walking-aid
+  items:
+  - amz-walking-stick
+  image: shop-getting-around
+- title: Staying safe
+  guide: preventing-falls-at-home
+  items:
+  - amz-key-safe
+  image: shop-staying-safe

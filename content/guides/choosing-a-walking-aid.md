@@ -3,6 +3,7 @@ title: Choosing a walking aid - sticks, frames, rollators and wheelchairs
 description: Which walking aid suits which situation, how to get one assessed and fitted, and when the NHS wheelchair service can help.
 category: stairlifts-and-mobility
 updated: 2026-11-21
+image: guide-choosing-a-walking-aid
 status: published
 products: [complete-care-shop, efoldi, countrywide, amz-walking-stick]
 ---

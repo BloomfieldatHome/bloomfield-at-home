@@ -3,6 +3,7 @@ title: Preventing falls at home - a room-by-room checklist
 description: Simple, low-cost changes that reduce the risk of falls at home, plus the free occupational therapy assessment most families don't know about.
 category: staying-safe-at-home
 updated: 2026-11-21
+image: guide-preventing-falls
 status: published
 products: [amz-grab-rails, amz-non-slip-bath-mat, amz-night-lights, amz-key-safe]
 ---

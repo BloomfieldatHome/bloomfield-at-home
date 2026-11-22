@@ -3,6 +3,7 @@ title: Making a will - your options and what to watch for
 description: Solicitor, will writer or online will? A plain-English look at the ways to make a will in the UK and the common mistakes to avoid.
 category: wills-and-lpas
 updated: 2026-11-21
+image: guide-making-a-will
 status: published
 products: [squiggle, octopus-legacy, beyond]
 ---

@@ -1,0 +1,118 @@
+# Image library: check here before generating new images. Originals in tools/ai-images/out, web copies in images/.
+- id: guide-choosing-a-walking-aid
+  file: images/guide-choosing-a-walking-aid.webp
+  source: tools/ai-images/out/guide-choosing-a-walking-aid.png
+  width: 1200
+  height: 805
+  alt: Illustration of a hallway with a walking stick, a rollator and a wheelchair by the front door
+  made: '2026-11-22'
+  used_in:
+  - guide:choosing-a-walking-aid
+- id: guide-cutting-household-bills
+  file: images/guide-cutting-household-bills.webp
+  source: tools/ai-images/out/guide-cutting-household-bills.png
+  width: 1200
+  height: 805
+  alt: Illustration of a kitchen table with letters, a calculator and a cup of tea beside a radiator
+  made: '2026-11-22'
+  used_in:
+  - guide:cutting-household-bills-later-life
+- id: guide-everyday-aids
+  file: images/guide-everyday-aids.webp
+  source: tools/ai-images/out/guide-everyday-aids.png
+  width: 1200
+  height: 805
+  alt: Illustration of a kettle tipper, a jar opener and easy-grip cutlery on a kitchen worktop
+  made: '2026-11-22'
+  used_in:
+  - guide:everyday-aids-that-make-life-easier
+- id: guide-lasting-power-of-attorney
+  file: images/guide-lasting-power-of-attorney.webp
+  source: tools/ai-images/out/guide-lasting-power-of-attorney.png
+  width: 1200
+  height: 805
+  alt: Illustration of a document, pen and reading glasses on a desk by a garden window
+  made: '2026-11-22'
+  used_in:
+  - guide:lasting-power-of-attorney-explained
+- id: guide-making-a-will
+  file: images/guide-making-a-will.webp
+  source: tools/ai-images/out/guide-making-a-will.png
+  width: 1200
+  height: 805
+  alt: Illustration of a sealed envelope and a pen on a wooden table
+  made: '2026-11-22'
+  used_in:
+  - guide:making-a-will-options
+- id: guide-personal-alarms
+  file: images/guide-personal-alarms.webp
+  source: tools/ai-images/out/guide-personal-alarms.png
+  width: 1200
+  height: 805
+  alt: Illustration of an armchair by a window with a pendant alarm on the side table
+  made: '2026-11-22'
+  used_in:
+  - guide:personal-alarms-explained
+- id: guide-preventing-falls
+  file: images/guide-preventing-falls.webp
+  source: tools/ai-images/out/guide-preventing-falls.png
+  width: 1200
+  height: 805
+  alt: Illustration of a well-lit hallway and stairs with handrails and a plug-in night light
+  made: '2026-11-22'
+  used_in:
+  - guide:preventing-falls-at-home
+- id: guide-stairlift-homelift
+  file: images/guide-stairlift-homelift.webp
+  source: tools/ai-images/out/guide-stairlift-homelift.png
+  width: 1200
+  height: 805
+  alt: Illustration of a stairlift at the bottom of a staircase and a bedroom set up downstairs
+  made: '2026-11-22'
+  used_in:
+  - guide:stairlift-homelift-or-move-downstairs
+- id: shop-bathroom
+  file: images/shop-bathroom.webp
+  source: tools/ai-images/out/shop-bathroom.png
+  width: 1200
+  height: 805
+  alt: Illustration of a bathroom with a grab rail, raised toilet seat and shower stool
+  made: '2026-11-22'
+  used_in:
+  - shop
+- id: shop-kitchen
+  file: images/shop-kitchen.webp
+  source: tools/ai-images/out/shop-kitchen.png
+  width: 1200
+  height: 805
+  alt: Illustration of a kitchen with a perching stool, kettle tipper and wheeled trolley
+  made: '2026-11-22'
+  used_in:
+  - shop
+- id: shop-around-the-house
+  file: images/shop-around-the-house.webp
+  source: tools/ai-images/out/shop-around-the-house.png
+  width: 1200
+  height: 805
+  alt: Illustration of a living room with a raised armchair, big-button phone and day clock
+  made: '2026-11-22'
+  used_in:
+  - shop
+- id: shop-getting-around
+  file: images/shop-getting-around.webp
+  source: tools/ai-images/out/shop-getting-around.png
+  width: 1200
+  height: 805
+  alt: Illustration of a front porch with a walking stick by the door
+  made: '2026-11-22'
+  used_in:
+  - shop
+- id: shop-staying-safe
+  file: images/shop-staying-safe.webp
+  source: tools/ai-images/out/shop-staying-safe.png
+  width: 1200
+  height: 805
+  alt: Illustration of a front door with a key safe and porch light
+  made: '2026-11-22'
+  used_in:
+  - shop

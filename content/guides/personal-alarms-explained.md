@@ -3,6 +3,7 @@ title: Personal alarms explained - how they work and how to choose one
 description: A plain-English guide to personal alarms and falls detectors for older people, including council lifeline services and what to ask before you sign up.
 category: staying-safe-at-home
 updated: 2026-11-21
+image: guide-personal-alarms
 status: published
 products: [taking-care, careline, lifeconnect24, yourstride]
 ---
