@@ -1,0 +1,2 @@
+Image models available: models/gemini-3.1-flash-lite-image, models/gemini-3.1-flash-image-preview, models/gemini-3.1-flash-image, models/gemini-2.5-flash-image
+test-bathroom-safety: OK with models/gemini-3.1-flash-lite-image
