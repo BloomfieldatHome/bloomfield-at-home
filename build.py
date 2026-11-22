@@ -35,10 +35,12 @@ def img_tag(iid, cls="hero-img", eager=False):
     i = IMAGES.get(iid)
     if not i:
         return ""
-    return (f'<img class="{cls}" src="/{i["file"]}" alt="{e(i["alt"])}" width="{i["width"]}" height="{i["height"]}" '
+    return (f'<img class="{cls}" style="display:block;width:100%;max-width:100%;height:auto;max-height:340px;object-fit:cover;border-radius:14px" src="/{i["file"]}" alt="{e(i["alt"])}" width="{i["width"]}" height="{i["height"]}" '
             f'{"fetchpriority=\"high\"" if eager else "loading=\"lazy\""} decoding="async">')
 YEAR = date.today().year
+import hashlib
 e = html.escape
+CSS_VER = ""
 
 CSS = """
 :root{--ink:#1D2B3A;--muted:#566270;--teal:#1D2B3A;--teal-d:#7C2D37;--cream:#FAF7F2;--sand:#F1E8E3;--line:#DDD6CC;--accent:#7C2D37}
@@ -48,7 +50,7 @@ a{color:var(--teal-d)}a:focus-visible,button:focus-visible{outline:3px solid var
 .wrap{max-width:760px;margin:0 auto;padding:0 18px}
 header.site{background:#fff;border-bottom:1px solid var(--line)}
 header.site .wrap{display:flex;align-items:center;justify-content:space-between;min-height:64px;gap:12px}
-.logo{font-weight:700;font-size:1.2rem;text-decoration:none;color:var(--ink);letter-spacing:.2px}
+.logo{white-space:nowrap;font-weight:700;font-size:1.2rem;text-decoration:none;color:var(--ink);letter-spacing:.2px}
 .logo span{color:#7C2D37}
 nav.top a{font-family:system-ui,-apple-system,Segoe UI,Roboto,sans-serif;font-size:.95rem;text-decoration:none;margin-left:14px}
 .hero{padding:34px 0 18px}
@@ -57,6 +59,7 @@ h2{font-size:1.35rem;margin:1.6em 0 .5em}
 .lead{font-size:1.1rem;color:var(--muted)}
 .hero-img,.sec-img{display:block;width:100%;height:auto;border-radius:14px;margin:6px 0 18px;background:var(--sand)}
 .sec-img{margin:4px 0 14px}
+@media (max-width:420px){.logo{font-size:1.02rem}nav.top a{margin-left:10px;font-size:.9rem}}
 .cards{display:grid;grid-template-columns:1fr;gap:14px;margin:18px 0 30px}
 .card{display:block;background:#fff;border:1px solid var(--line);border-radius:12px;padding:16px 18px;text-decoration:none;color:var(--ink)}
 .card h3{margin:0 0 4px;font-size:1.1rem;color:var(--teal-d)}
@@ -81,6 +84,8 @@ INDEPENDENT = ("Bloomfield at Home is an independent guide site. It is not a car
 
 
 def page(title, description, body, path, extra_head="", og_image=""):
+    global CSS_VER
+    CSS_VER = CSS_VER or hashlib.md5(CSS.encode()).hexdigest()[:8]
     canonical = SITE["url"] + path
     nav = "".join(f'<a href="/{c["slug"]}/">{e(c["title"].split(" - ")[0].split(",")[0])}</a>'
                   for c in SITE["categories"][:0])
@@ -95,7 +100,7 @@ def page(title, description, body, path, extra_head="", og_image=""):
 <meta property="og:site_name" content="{e(SITE['name'])}">{('<meta property="og:image" content="' + SITE["url"] + "/" + og_image + '">') if og_image else ""}
 <meta name="generator" content="bah-cf">
 <meta name="p:domain_verify" content="ed5b08fff46b6a262476f5f0b8973de2"/>
-<link rel="stylesheet" href="/style.css">{extra_head}
+<link rel="stylesheet" href="/style.css?v={CSS_VER}">{extra_head}
 </head><body>
 <header class="site"><div class="wrap"><a class="logo" href="/">Bloomfield <span>at Home</span></a>
 <nav class="top"><a href="/guides/">Guides</a><a href="/shop/">Shop</a><a href="/about/">About</a></nav></div></header>
