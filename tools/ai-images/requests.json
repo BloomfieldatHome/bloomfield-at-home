@@ -1,5 +1,72 @@
 [
-  {"id": "test-bathroom-safety",
-   "aspect": "2:3",
-   "prompt": "Flat vector illustration, simple shapes, no text, no people. A calm, tidy home bathroom seen from the doorway: a white toilet with a sturdy grab rail on the wall beside it, a bath with a non-slip mat inside and a bath mat on the floor, a small plug-in night light glowing low on the wall. Muted colour palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Soft, warm, reassuring, uncluttered, plenty of empty space, editorial magazine style."}
+ {
+  "id": "test-bathroom-safety",
+  "aspect": "2:3",
+  "prompt": "Flat vector illustration, simple shapes, no text, no people. A calm, tidy home bathroom seen from the doorway: a white toilet with a sturdy grab rail on the wall beside it, a bath with a non-slip mat inside and a bath mat on the floor, a small plug-in night light glowing low on the wall. Muted colour palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Soft, warm, reassuring, uncluttered, plenty of empty space, editorial magazine style."
+ },
+ {
+  "id": "guide-choosing-a-walking-aid",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a hallway in a cosy home with a walking stick, a three-wheeled rollator and a folded wheelchair neatly side by side, a coat on a hook, a front door with a little window."
+ },
+ {
+  "id": "guide-cutting-household-bills",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a kitchen table with a mug of tea, a few envelopes and a calculator, a radiator under a window and a small plant, warm and calm."
+ },
+ {
+  "id": "guide-everyday-aids",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a kitchen worktop with a kettle in a tipping cradle, a jar opener, chunky easy-grip cutlery in a pot and a long-handled reacher leaning against the counter."
+ },
+ {
+  "id": "guide-lasting-power-of-attorney",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a simple desk with a folded document, a fountain pen, reading glasses and a cup of tea beside a window with a garden view, suggesting planning ahead."
+ },
+ {
+  "id": "guide-making-a-will",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: an envelope sealed with a maroon wax seal on a wooden table, a pen and a small potted plant, gentle and calm."
+ },
+ {
+  "id": "guide-personal-alarms",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a cosy armchair by a window with a side table holding a cup of tea and a small pendant alarm on a cord, a wristwatch-style alarm beside it, soft evening lamp light."
+ },
+ {
+  "id": "guide-preventing-falls",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a bright hallway and staircase with handrails on both sides, a non-slip rug, good lighting and a plug-in night light, clear uncluttered floor."
+ },
+ {
+  "id": "guide-stairlift-homelift",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a staircase with a simple stairlift chair parked at the bottom, and through an open doorway a bedroom set up downstairs with a neatly made bed."
+ },
+ {
+  "id": "shop-bathroom",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a tidy home bathroom with a grab rail beside the toilet, a raised toilet seat, a shower stool in the shower and a non-slip mat."
+ },
+ {
+  "id": "shop-kitchen",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a kitchen with a perching stool at the worktop, a kettle tipper, easy-grip cutlery and a small wheeled trolley with two trays."
+ },
+ {
+  "id": "shop-around-the-house",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a living room with an armchair on chair raisers, a big-button phone and a large day-and-date clock on a side table, a reacher-grabber leaning by the chair."
+ },
+ {
+  "id": "shop-getting-around",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a front porch with an adjustable walking stick leaning by the door, a pair of comfortable shoes and a doormat, a garden path beyond."
+ },
+ {
+  "id": "shop-staying-safe",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a front door with a small wall-mounted key safe beside it, a porch light on, a doormat and a potted plant, welcoming at dusk."
+ }
 ]

@@ -23,6 +23,7 @@ def pick_model():
     names.sort(key=lambda n: ("preview" in n, "lite" in n, n), reverse=False)
     # prefer the newest non-preview flash image model
     names.sort(key=lambda n: [int(x) if x.isdigit() else 0 for x in n.replace("-", ".").split(".")], reverse=True)
+    names.sort(key=lambda n: ("lite" in n, "preview" in n))  # full flash model first, lite as fallback
     return names
 
 def main():
