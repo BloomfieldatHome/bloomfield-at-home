@@ -86,7 +86,7 @@ def page(title, description, body, path, extra_head=""):
 <link rel="stylesheet" href="/style.css">{extra_head}
 </head><body>
 <header class="site"><div class="wrap"><a class="logo" href="/">Bloomfield <span>at Home</span></a>
-<nav class="top"><a href="/guides/">Guides</a><a href="/about/">About</a></nav></div></header>
+<nav class="top"><a href="/guides/">Guides</a><a href="/shop/">Shop</a><a href="/about/">About</a></nav></div></header>
 <main class="wrap">{body}</main>
 <footer class="site"><div class="wrap">
 <p class="indep">{INDEPENDENT}</p>
@@ -105,10 +105,10 @@ def write(path, content):
 def provider_card(p):
     if is_amazon(p) and p.get("affiliate_url"):
         link = (f'<a class="btn" href="{e(p["affiliate_url"])}" rel="sponsored nofollow noopener" '
-                f'target="_blank">See options on Amazon (affiliate link)</a>')
+                f'target="_blank">See options on Amazon</a>')
     elif p.get("affiliate_url"):
         link = (f'<a class="btn" href="{e(p["affiliate_url"])}" rel="sponsored nofollow noopener" '
-                f'target="_blank">Visit {e(p["name"].split(" (")[0])} (affiliate link)</a>')
+                f'target="_blank">Visit {e(p["name"].split(" (")[0])}</a>')
     else:
         link = (f'<a class="btn" href="{e(p["official_url"])}" rel="nofollow noopener" '
                 f'target="_blank">Visit {e(p["name"].split(" (")[0])}</a>')
@@ -167,9 +167,9 @@ def build():
                   "publisher": {"@type": "Organization", "name": SITE["name"]},
                   "mainEntityOfPage": f"{SITE['url']}/guides/{g['slug']}/"}
         body = (f'<p class="crumbs"><a href="/">Home</a> &rsaquo; <a href="/{cat["slug"]}/">{e(cat["title"])}</a></p>'
-                f'{notice}<article><h1>{e(g["title"])}</h1>'
+                f'<article><h1>{e(g["title"])}</h1>'
                 f'<p class="meta">Updated {g["updated"].strftime("%-d %B %Y")} &middot; General information, not professional advice</p>'
-                f'{g["html"]}{provs}</article>')
+                f'{g["html"]}{provs}</article>{notice}')
         head = f'<script type="application/ld+json">{json.dumps(schema)}</script>'
         write(f"/guides/{g['slug']}/", page(f"{g['title']} | {SITE['name']}", g["description"], body,
                                            f"/guides/{g['slug']}/", head))
@@ -189,7 +189,7 @@ def build():
                   '<a href="/affiliate-disclosure/">Find out more</a>.</div>') if has_aff else ""
         provs = ("<h2>Providers</h2>" + "".join(provider_card(p) for p in prods)) if prods else ""
         body = (f'<section class="hero"><h1>{e(c["title"])}</h1><p class="lead">{e(c["intro"])}</p></section>'
-                f'{notice}<h2>Guides</h2>{guide_cards(items)}{provs}')
+                f'<h2>Guides</h2>{guide_cards(items)}{provs}{notice}')
         write(f"/{c['slug']}/", page(f"{c['title']} | {SITE['name']}", c["intro"], body, f"/{c['slug']}/"))
         urls.append(f"/{c['slug']}/")
 
@@ -209,6 +209,33 @@ def build():
     write("/guides/", page(f"All guides | {SITE['name']}", "Every Bloomfield at Home guide in one place.",
                            f'<section class="hero"><h1>All guides</h1></section>{guide_cards(live)}', "/guides/"))
 
+    # Shop front
+    SHOP = yaml.safe_load((ROOT / "data/shop.yaml").read_text())
+    gtitle = {g["slug"]: g["title"] for g in live}
+    secs = ""
+    for sec in SHOP["sections"]:
+        items = [PRODUCTS[i] for i in sec["items"] if i in PRODUCTS and PRODUCTS[i].get("affiliate_url")]
+        if not items:
+            continue
+        guide = sec.get("guide")
+        glink = (f'<p class="meta">Not sure what you need? Read <a href="/guides/{guide}/">{e(gtitle[guide])}</a>.</p>'
+                 if guide in gtitle else "")
+        secs += f'<h2>{e(sec["title"])}</h2>{glink}' + "".join(provider_card(p) for p in items)
+    shop_notice = (f'<div class="notice"><strong>Ad / affiliate links:</strong> this page contains affiliate links. '
+                 f'If you buy through them we may earn a commission at no extra cost to you. {AMAZON_LINE} '
+                 '<a href="/affiliate-disclosure/">Find out more</a>.</div>')
+    shop_body = (f'<section class="hero"><h1>{e(SHOP["title"])}</h1><p class="lead">{e(SHOP["intro"])}</p></section>'
+                 '<div class="provider"><h3>Check what you can get free first</h3>'
+                 '<p>Your local council can arrange a free occupational therapist (OT) assessment, and many aids such as grab rails, '
+                 'toilet frames, bath boards and perching stools are often provided or fitted free after one. Contact your council\'s adult social care team, '
+                 'or ask your GP. Equipment for health needs can also come through the NHS.</p></div>'
+                 f'{secs}<p class="meta">Check measurements and weight limits before buying. If you are unsure what is suitable, '
+                 'ask for an OT assessment, or speak to a GP, physio or pharmacist.</p>' + shop_notice)
+    write("/shop/", page(f"Shop everyday aids | {SITE['name']}",
+                         "Practical aids for the bathroom, kitchen and around the home for older people, with the free council and NHS options first.",
+                         shop_body, "/shop/"))
+    urls.append("/shop/")
+
     about = """<section class="hero"><h1>About Bloomfield at Home</h1></section><article>
 <p>Bloomfield at Home is an independent guide site. It brings together plain-English information about the practical side of later life at home: alarms and home safety, mobility equipment, wills and Lasting Powers of Attorney, everyday aids and household bills.</p>
 <h2>What we are not</h2>
@@ -218,14 +245,14 @@ def build():
 <ul><li>We show free and official routes first, such as council assessments and gov.uk services.</li>
 <li>We only list established UK providers with clear terms.</li>
 <li>We do not cover insurance, funeral plans, pensions, equity release, loans or health supplements.</li>
-<li>Some links earn us a commission. They are always labelled. See <a href="/affiliate-disclosure/">how we make money</a>.</li></ul>
+<li>Some links earn us a commission. Pages that contain them always say so. See <a href="/affiliate-disclosure/">how we make money</a>.</li></ul>
 <h2>Spotted a mistake?</h2>
 <p>Rules and prices change. If something looks out of date, email <a href="mailto:hello@bloomfieldathome.co.uk">hello@bloomfieldathome.co.uk</a> and we will check it.</p></article>"""
     write("/about/", page(f"About | {SITE['name']}", "Who runs Bloomfield at Home and how we choose what to include.", about, "/about/"))
 
     disclosure = """<section class="hero"><h1>How we make money</h1></section><article>
 <p>Bloomfield at Home is free to read. To pay for it, some of the links on this site are affiliate or referral links. If you click one and then buy something or sign up, the company may pay us a commission. You never pay more because you used our link.</p>
-<ul><li>Affiliate links are marked "(affiliate link)", and pages that contain them show an "Ad / affiliate links" notice at the top.</li>
+<ul><li>Every page that contains affiliate links shows an "Ad / affiliate links" notice at the bottom of the page.</li>
 <li>Whether a company pays us does not decide whether it appears or where it is listed.</li>
 <li>We always mention free and official alternatives where they exist.</li>
 <li>As an Amazon Associate we earn from qualifying purchases.</li></ul>

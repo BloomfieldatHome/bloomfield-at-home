@@ -162,3 +162,63 @@
   blurb: Large-print clocks that show the day of the week, the date and whether it is morning or afternoon.
   programme: Amazon
   amazon_search: day date clock large display
+- id: amz-raised-toilet-seat
+  name: Raised toilet seats
+  category: everyday-aids-and-wellbeing
+  blurb: A seat that clips onto the toilet to make sitting and standing easier. Usually 5cm to 15cm high; check it suits your toilet's shape before buying.
+  programme: Amazon
+  amazon_search: raised toilet seat
+- id: amz-toilet-frame
+  name: Toilet frames
+  category: everyday-aids-and-wellbeing
+  blurb: A free-standing frame with arm rests around the toilet to push up from. Check the width fits your bathroom and the height adjusts.
+  programme: Amazon
+  amazon_search: toilet frame elderly
+- id: amz-shower-stool
+  name: Shower stools and chairs
+  category: everyday-aids-and-wellbeing
+  blurb: For sitting while showering. Check the seat height adjusts, the feet are rubber-tipped and the weight limit suits the user.
+  programme: Amazon
+  amazon_search: shower stool adjustable height
+- id: amz-bath-board
+  name: Bath boards
+  category: everyday-aids-and-wellbeing
+  blurb: A board across the bath to sit on and swing the legs over. Measure the inside width of the bath first.
+  programme: Amazon
+  amazon_search: bath board
+- id: amz-long-handled-sponge
+  name: Long-handled sponges and toe washers
+  category: everyday-aids-and-wellbeing
+  blurb: For washing the back, legs and feet without bending or twisting.
+  programme: Amazon
+  amazon_search: long handled sponge
+- id: amz-jar-opener
+  name: Jar and bottle openers
+  category: everyday-aids-and-wellbeing
+  blurb: Grip pads and openers for lids and bottles, useful for weaker or painful hands.
+  programme: Amazon
+  amazon_search: jar opener for weak hands
+- id: amz-easy-grip-cutlery
+  name: Easy-grip cutlery
+  category: everyday-aids-and-wellbeing
+  blurb: Cutlery with thicker, cushioned handles that are easier to hold.
+  programme: Amazon
+  amazon_search: easy grip cutlery
+- id: amz-perching-stool
+  name: Perching stools
+  category: everyday-aids-and-wellbeing
+  blurb: A tall, slightly sloped stool for resting while cooking or washing up. Check the height adjusts to your worktop.
+  programme: Amazon
+  amazon_search: perching stool
+- id: amz-walker-trolley
+  name: Indoor trolleys
+  category: everyday-aids-and-wellbeing
+  blurb: A wheeled trolley with trays for carrying meals and drinks between rooms. Check the handle height and that it suits your floors.
+  programme: Amazon
+  amazon_search: indoor walker trolley elderly
+- id: amz-big-button-phone
+  name: Big-button phones
+  category: everyday-aids-and-wellbeing
+  blurb: Phones with large buttons, loud ringers and photo speed-dial keys for family numbers.
+  programme: Amazon
+  amazon_search: big button phone photo memory
