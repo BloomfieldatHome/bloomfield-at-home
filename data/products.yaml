@@ -101,3 +101,64 @@
   programme: Awin
   awin_mid: 2536
   awin_approved: false
+# --- Amazon Associates (UK) search links: tag set in data/site.yaml (amazon_tag). Aids only, never medicines or supplements.
+- id: amz-grab-rails
+  name: Grab rails
+  category: staying-safe-at-home
+  blurb: Fixed rails for beside the toilet, bath, shower or front step. Fixed rails must go into a solid wall with the right fixings; suction rails are not a substitute.
+  programme: Amazon
+  amazon_search: grab rail bathroom
+- id: amz-non-slip-bath-mat
+  name: Non-slip bath and shower mats
+  category: staying-safe-at-home
+  blurb: Rubber mats with suction cups for inside the bath or shower tray, plus a non-slip mat for stepping out onto.
+  programme: Amazon
+  amazon_search: non slip bath mat suction
+- id: amz-night-lights
+  name: Plug-in motion-sensor night lights
+  category: staying-safe-at-home
+  blurb: Small lights that come on automatically when someone walks past, useful on the route from bed to toilet.
+  programme: Amazon
+  amazon_search: plug in motion sensor night light
+- id: amz-key-safe
+  name: Key safes
+  category: staying-safe-at-home
+  blurb: A coded box fixed by the front door so carers, family or emergency services can get in. Choose one with a recognised security rating and tell your home insurer.
+  programme: Amazon
+  amazon_search: police approved key safe
+- id: amz-walking-stick
+  name: Adjustable walking sticks
+  category: stairlifts-and-mobility
+  blurb: Height-adjustable and folding sticks. Set the handle at wrist height when standing with arms by your sides, and replace worn rubber ferrules.
+  programme: Amazon
+  amazon_search: adjustable walking stick
+- id: amz-kettle-tipper
+  name: Kettle tippers
+  category: everyday-aids-and-wellbeing
+  blurb: A cradle that holds the kettle so it can be tipped to pour without lifting it. Check it fits your kettle size.
+  programme: Amazon
+  amazon_search: kettle tipper
+- id: amz-reacher
+  name: Reacher-grabbers
+  category: everyday-aids-and-wellbeing
+  blurb: Long-handled grabbers for picking things up without bending or reaching. Lengths vary from about 60cm to 90cm.
+  programme: Amazon
+  amazon_search: reacher grabber
+- id: amz-chair-raisers
+  name: Chair and bed raisers
+  category: everyday-aids-and-wellbeing
+  blurb: Blocks that lift a chair or bed to a height that is easier to get up from. Check the leg shape and weight limit.
+  programme: Amazon
+  amazon_search: chair raisers elderly
+- id: amz-pill-organiser
+  name: Weekly pill organisers
+  category: everyday-aids-and-wellbeing
+  blurb: Boxes with a compartment for each day and time. Ask the pharmacist first if medicines are getting confusing.
+  programme: Amazon
+  amazon_search: weekly pill organiser
+- id: amz-day-clock
+  name: Day and date clocks
+  category: everyday-aids-and-wellbeing
+  blurb: Large-print clocks that show the day of the week, the date and whether it is morning or afternoon.
+  programme: Amazon
+  amazon_search: day date clock large display

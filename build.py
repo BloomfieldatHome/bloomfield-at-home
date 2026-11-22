@@ -18,6 +18,14 @@ for _p in PRODUCTS.values():
     if _p.get("awin_approved") and _p.get("awin_mid"):
         _p["affiliate_url"] = (f"https://www.awin1.com/cread.php?awinmid={_p['awin_mid']}"
                                f"&awinaffid={SITE['awin_publisher_id']}&clickref=bah&ued={quote(_p['official_url'], safe='')}")
+    if _p.get("programme") == "Amazon" and _p.get("amazon_search") and SITE.get("amazon_tag"):
+        _p["official_url"] = f"https://www.amazon.co.uk/s?k={quote(_p['amazon_search'])}"
+        _p["affiliate_url"] = f"{_p['official_url']}&tag={SITE['amazon_tag']}"
+AMAZON_LINE = "As an Amazon Associate, Bloomfield at Home earns from qualifying purchases."
+
+
+def is_amazon(p):
+    return p.get("programme") == "Amazon"
 CATS = {c["slug"]: c for c in SITE["categories"]}
 YEAR = date.today().year
 e = html.escape
@@ -81,7 +89,7 @@ def page(title, description, body, path, extra_head=""):
 <main class="wrap">{body}</main>
 <footer class="site"><div class="wrap">
 <p class="indep">{INDEPENDENT}</p>
-<p>Some pages contain affiliate links: if you buy through them we may earn a commission, at no extra cost to you. It never changes what we recommend. <a href="/affiliate-disclosure/">How we make money</a></p>
+<p>Some pages contain affiliate links: if you buy through them we may earn a commission, at no extra cost to you. It never changes what we recommend. {AMAZON_LINE if SITE.get("amazon_tag") else ""} <a href="/affiliate-disclosure/">How we make money</a></p>
 <p><a href="/about/">About</a><a href="/affiliate-disclosure/">Affiliate disclosure</a><a href="/privacy/">Privacy</a><a href="mailto:{SITE['email']}">Contact</a></p>
 <p>&copy; {YEAR} Bloomfield at Home</p></div></footer>
 </body></html>"""
@@ -94,7 +102,10 @@ def write(path, content):
 
 
 def provider_card(p):
-    if p.get("affiliate_url"):
+    if is_amazon(p) and p.get("affiliate_url"):
+        link = (f'<a class="btn" href="{e(p["affiliate_url"])}" rel="sponsored nofollow noopener" '
+                f'target="_blank">See options on Amazon (affiliate link)</a>')
+    elif p.get("affiliate_url"):
         link = (f'<a class="btn" href="{e(p["affiliate_url"])}" rel="sponsored nofollow noopener" '
                 f'target="_blank">Visit {e(p["name"].split(" (")[0])} (affiliate link)</a>')
     else:
@@ -137,12 +148,20 @@ def build():
         cat = CATS[g["category"]]
         prods = [PRODUCTS[pid] for pid in g.get("products") or [] if pid in PRODUCTS]
         has_aff = any(p.get("affiliate_url") for p in prods)
+        has_amz = any(is_amazon(p) and p.get("affiliate_url") for p in prods)
         notice = ('<div class="notice"><strong>Ad / affiliate links:</strong> this page contains affiliate links. '
                   'If you buy through them we may earn a commission at no extra cost to you. '
+                  + (AMAZON_LINE + ' ' if has_amz else '') +
                   '<a href="/affiliate-disclosure/">Find out more</a>.</div>') if has_aff else ""
         provs = ""
-        if prods:
-            provs = "<h2>Providers to compare</h2><p>Listed in no particular order. Always compare with the free and local options above.</p>" + "".join(provider_card(p) for p in prods)
+        provs_list = [p for p in prods if not is_amazon(p)]
+        amz_list = [p for p in prods if is_amazon(p) and p.get("affiliate_url")]
+        if provs_list:
+            provs = "<h2>Providers to compare</h2><p>Listed in no particular order. Always compare with the free and local options above.</p>" + "".join(provider_card(p) for p in provs_list)
+        if amz_list:
+            provs += ("<h2>Where to buy</h2><p>These links open a search on Amazon so you can compare prices, sizes and reviews rather than "
+                      "being sent to one product. Check measurements and weight limits before buying, and if you are unsure what is "
+                      "suitable, ask for a free occupational therapist assessment first.</p>" + "".join(provider_card(p) for p in amz_list))
         schema = {"@context": "https://schema.org", "@type": "Article", "headline": g["title"],
                   "description": g["description"], "dateModified": str(g["updated"]),
                   "publisher": {"@type": "Organization", "name": SITE["name"]},
@@ -164,7 +183,7 @@ def build():
     # Categories
     for c in SITE["categories"]:
         items = [g for g in live if g["category"] == c["slug"]]
-        prods = [p for p in PRODUCTS.values() if p["category"] == c["slug"]]
+        prods = [p for p in PRODUCTS.values() if p["category"] == c["slug"] and not is_amazon(p)]
         has_aff = any(p.get("affiliate_url") for p in prods)
         notice = ('<div class="notice"><strong>Ad / affiliate links:</strong> some links on this page are affiliate links. '
                   '<a href="/affiliate-disclosure/">Find out more</a>.</div>') if has_aff else ""

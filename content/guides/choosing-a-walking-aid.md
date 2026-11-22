@@ -4,7 +4,7 @@ description: Which walking aid suits which situation, how to get one assessed an
 category: stairlifts-and-mobility
 updated: 2026-11-21
 status: published
-products: [complete-care-shop, efoldi, countrywide]
+products: [complete-care-shop, efoldi, countrywide, amz-walking-stick]
 ---
 The wrong walking aid can make falls more likely, not less. A quick assessment from a physiotherapist or occupational therapist is worth asking for - ask the GP, or the council if someone is struggling at home.
 

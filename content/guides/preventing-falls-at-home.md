@@ -4,7 +4,7 @@ description: Simple, low-cost changes that reduce the risk of falls at home, plu
 category: staying-safe-at-home
 updated: 2026-11-21
 status: published
-products: []
+products: [amz-grab-rails, amz-non-slip-bath-mat, amz-night-lights, amz-key-safe]
 ---
 Falls are one of the most common reasons older people end up in hospital, and many happen at home doing ordinary things. Most of the fixes are cheap and quick.
 
