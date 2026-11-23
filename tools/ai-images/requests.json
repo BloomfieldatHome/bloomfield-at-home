@@ -68,5 +68,30 @@
   "id": "shop-staying-safe",
   "aspect": "3:2",
   "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space, wide landscape composition. Scene: a front door with a small wall-mounted key safe beside it, a porch light on, a doormat and a potted plant, welcoming at dusk."
+ },
+ {
+  "id": "guide-bathroom-aids",
+  "aspect": "3:2",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no numbers, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space. Wide landscape composition. Scene: a bright, tidy home bathroom with a bath that has a white bath board across it, a white plastic shower stool in a walk-in shower, a raised toilet seat with a free-standing toilet frame, and a sturdy grab rail on the tiled wall."
+ },
+ {
+  "id": "pin-bathroom-aids",
+  "aspect": "4:3",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no numbers, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space. Scene: close view of a bath with a white bath board resting across the rim, a long-handled sponge on the board, a non-slip mat inside the bath and a grab rail on the tiled wall above, a folded towel on a stool."
+ },
+ {
+  "id": "pin-night-safety",
+  "aspect": "4:3",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no numbers, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space. Scene: a calm bedroom and landing at night, a small plug-in night light glowing softly low on the wall lighting a clear path from the bed to an open door, slippers neatly by the bed, a lamp on the bedside table, dark navy night tones with warm glow."
+ },
+ {
+  "id": "pin-kitchen-hands",
+  "aspect": "4:3",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no numbers, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space. Scene: a kitchen worktop with an electric kettle sitting in a tipping cradle, a rubber jar-opening grip pad next to a jar, a pot of chunky easy-grip cutlery, and a tall perching stool by the counter."
+ },
+ {
+  "id": "pin-walking-stick",
+  "aspect": "4:3",
+  "prompt": "Flat vector editorial illustration, simple clean shapes, no text, no lettering, no numbers, no logos or brand names, no realistic or identifiable people (people only as simple faceless stylised figures if needed). Muted palette of deep navy #1D2B3A, maroon #7C2D37, cream #FAF7F2, soft pink #E8C4C8 and warm sand #F1E8E3. Calm, warm, reassuring, uncluttered, plenty of empty space. Scene: a simple faceless stylised older figure standing upright in a sunny hallway holding a wooden walking stick, the handle level with their wrist, arm relaxed by their side, a coat hook and front door behind them."
  }
 ]
