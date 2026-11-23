@@ -116,3 +116,48 @@
   made: '2026-11-22'
   used_in:
   - shop
+- id: guide-bathroom-aids
+  file: images/guide-bathroom-aids.webp
+  source: tools/ai-images/out/guide-bathroom-aids.png
+  width: 1200
+  height: 805
+  alt: Illustration of a bathroom with a bath board, a shower stool, a toilet frame and grab rails
+  made: '2026-11-23'
+  used_in:
+  - guide:bathroom-aids-bath-shower-toilet
+- id: pin-bathroom-aids
+  file: ''
+  source: tools/ai-images/out/pin-bathroom-aids.png
+  width: 1200
+  height: 896
+  alt: Illustration of a bath board across a bath with a long-handled sponge, a non-slip mat and a grab rail
+  made: '2026-11-23'
+  used_in:
+  - pin:bathroom-aids (draft, weekly-2026-11-23)
+- id: pin-night-safety
+  file: ''
+  source: tools/ai-images/out/pin-night-safety.png
+  width: 1200
+  height: 896
+  alt: Illustration of a bedroom at night with a plug-in night light lighting the way to the door
+  made: '2026-11-23'
+  used_in:
+  - pin:night-safety (draft, weekly-2026-11-23)
+- id: pin-kitchen-hands
+  file: ''
+  source: tools/ai-images/out/pin-kitchen-hands.png
+  width: 1200
+  height: 896
+  alt: Illustration of a kettle in a tipping cradle, a jar-opening grip, easy-grip utensils and a perching stool
+  made: '2026-11-23'
+  used_in:
+  - pin:kitchen-aids (draft, weekly-2026-11-23)
+- id: pin-walking-stick
+  file: ''
+  source: tools/ai-images/out/pin-walking-stick.png
+  width: 1200
+  height: 896
+  alt: Illustration of a stylised older figure in a hallway holding a walking stick at wrist height
+  made: '2026-11-23'
+  used_in:
+  - pin:walking-stick-height (draft, weekly-2026-11-23)
