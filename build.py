@@ -297,7 +297,11 @@ def build():
     from datetime import datetime, timezone
     pins = yaml.safe_load((ROOT / "data/pins.yaml").read_text()) or []
     items = []
+    today = datetime.now(timezone.utc).date()
     for p in pins:
+        # Pins dated in the future stay out of the feed until a rebuild on/after their date (one per day)
+        if datetime.strptime(str(p["date"]), "%Y-%m-%d").date() > today:
+            continue
         when = datetime.strptime(str(p["date"]), "%Y-%m-%d").replace(hour=10, tzinfo=timezone.utc)
         link = f"{SITE['url']}/guides/{p['guide']}/?utm_source=pinterest&utm_medium=social"
         img = f"{SITE['url']}/pins/{p['img']}"
